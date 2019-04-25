@@ -1,0 +1,8 @@
+<div class="game">
+    <div class="field"
+         [id]="field.id"
+         *ngFor="let field of fields"
+         [ngClass]="(winningNumbers.length === 3 && winningNumbers.includes(field.id)) ? field.name + ' win' : field.name"
+         (click)="setIcon(field.id)"
+		 #fieldElement></div>
+</div>
