@@ -6,7 +6,8 @@
 [3.0 Setup](#30-setup)  
 [3.1 Clone project](#31-clone-project)  
 [3.2 Install dependencies](#32-install-dependencies)  
-[3.3 Execute in the browser browser](#33-execute-in-the-browser)   
+[3.3 Execute in the browser browser](#33-execute-in-the-browser)
+[4.0 Implementation thoughts](#40-implementation-thoughts)
 
 ## 1.0 Description ##
 This is a web application featuring the famous game of Tic-Tac-Toe.
@@ -46,3 +47,11 @@ npm start
 ```
 
 Now open the following url in the browser: http://localhost:4200
+
+## 4.0 Implementation thoughts  ##
+* For this assignment I first stored all possible winning combinations
+* Each time a player makes a move I check:
+  * if they at least have made 3 moves
+  * Then check for each winning combination if the current player has all 3 fields in their history
+* If a player matches a winning combination I apply the "win" class to the fields
+* After all fields are filled in (no winner) or if there is a winner, if you click a field, the game resets. 
